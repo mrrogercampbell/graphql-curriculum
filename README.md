@@ -6,3 +6,5 @@ This repo currently houses the following lessons:
 2. [GraphQL and React](2-graphql-and-react/README.md)
 3. [Building a GraphQL API Pt. 1](3-building-a-graphql-api-pt-1/README.md)
 4. [Building a GraphQL API Pt. 2](4-building-a-graphql-api-pt-2/README.md)
+
+The above lesson are currently taught in the sequence in which they are listed.
