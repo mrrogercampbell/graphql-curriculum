@@ -15,40 +15,39 @@ These lesson are currently taught in the follow sequence:
         <summary>Assignments:</summary>
         <!-- <br> -->
         <ul>
-          <li><a href="#">Lab 1</a></li>
+          <li><a href="./assignments/lab-1">Lab 1</a></li>
           <li>Homework(s):</li>
           <ul>
-          <li><a href="#">Homework 1</a></li>
-          <li><a href="#">Homework 2</a></li>
+          <li><a href="./assignments/homework-1">Homework 1</a></li>
+          <li><a href="./assignments/homework-2">Homework 2</a></li>
           </ul>
         </details>
         <br/>
-
 1. [GraphQL and React](2-graphql-and-react/README.md)
    * [Instructor Prep](#)
         <details>
         <summary>Assignments:</summary>
         <!-- <br> -->
         <ul>
-          <li><a href="#">Lab 2</a></li>
+          <li><a href="./assignments/lab-2">Lab 2</a></li>
           <li>Homework(s):</li>
           <ul>
-          <li><a href="#">Homework 3</a></li>
-          <li><a href="#">Homework 4</a></li>
+          <li><a href="./assignments/lab-3">Homework 3</a></li>
+          <li><a href="./assignments/lab-4">Homework 4</a></li>
           </ul>
         </details>
         <br/>
 2. [Building a GraphQL API Pt. 1](3-building-a-graphql-api-pt-1/README.md)
-   * [Lab 3](#)
+   * [Lab 3](./assignments/lab-3)
    * Homework(s):
-     * [Homework 5](#)
-     * [Homework 6](#)
+     * [Homework 5](./assignments/lab-4)
+     * [Homework 6](./assignments/lab-5)
 3. [Building a GraphQL API Pt. 2](4-building-a-graphql-api-pt-2/README.md)
    * Lab:
-     * [Lab 4](#)
+     * [Lab 4](./assignments/lab-4)
    * Homework(s):
-     * [Homework 7](#)
-     * [Homework 8](#)
+     * [Homework 7](./assignments/lab-5)
+     * [Homework 8](./assignments/lab-6)
 
 
 ### Lab Assignments:
@@ -95,4 +94,3 @@ Homework assignments are listed to correlate to the lesson that are listed above
 7. Homework 7
    * [Instructor Prep](#)
    * [Grading Rubric](#)
-   * 
