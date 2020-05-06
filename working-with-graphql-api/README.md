@@ -108,13 +108,9 @@ Ideas for first Homework:
 
 ## Additional Resources
 
-- Any useful links should be included in the talk material where the link is
-  first referenced.
-- Additional links for further study or exploration are appropriate in this
-  section.
-- Links to important parts of documentation not covered during the talk, or
-  tools tangentially used but not part of the focus of the talk, are also
-  appropriate.
+* [GraphQL Docs](https://graphql.org/learn/)
+* [GraphQL: Core Features, Architecture, Pros and Cons](https://www.altexsoft.com/blog/engineering/graphql-core-features-architecture-pros-and-cons/)
+* [GraphQL vs REST](https://medium.com/@back4apps/graphql-vs-rest-62a3d6c2021d)
 
 ## [License](LICENSE)
 
