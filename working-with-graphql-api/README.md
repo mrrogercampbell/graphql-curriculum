@@ -66,17 +66,18 @@ This section will be a high level overview.
 The GraphQL API design architecture was created with a more flexible approach to requesting and responding with data. The main difference between GraphQL and REST is that GraphQL can get retrieve the data your application needs in a single request. GraphQL can do this because it regards all data in a web service as either types and fields, not endpoints. With this unique design pattern, you can access all your data from a single endpoint versus multiple.
 
 ### Benefits of GraphQL APIs
-* Fast
-* Gives Engineers Insight Into What Data Is Being Requested
+* Self Generating Documentation
+  * GraphQL has the ability to self document your API based on the code you write.
+* No Need For Overfetching
+  * Due to the flexibility of GraphQL's query language Engineer can request the specific data that want when they want.
 * Strong Type System
+  * The API's capabilities are defined clearly so that the client knows exactly how to access data.
 
 ### Limitations of a GraphQL APIs
 * Single Endpoint
+  * Where this is one of the greatest benefits, it can also cause a lot of issues when dealing with HTTP specification for caching.
 * Bloated Pattern For Small Applications
-
-Will explain in detail what a GraphQL API is and how they traditionally function.
-
-Will highlight the benefits and flaws to working with one.
+  * If you need a straight forward API for simple CRUD, than REST is probably your best approach due to the fact GraphQL can be a bit of heavy lifting for initial setup.
 
 #### Interacting with a GraphQL API via GraphiQL - We Do
 Will have students either
