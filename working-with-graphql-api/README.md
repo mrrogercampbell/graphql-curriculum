@@ -308,6 +308,9 @@ Ideas for first Homework:
 * [GraphQL Docs](https://graphql.org/learn/)
 * [GraphQL: Core Features, Architecture, Pros and Cons](https://www.altexsoft.com/blog/engineering/graphql-core-features-architecture-pros-and-cons/)
 * [GraphQL vs REST](https://medium.com/@back4apps/graphql-vs-rest-62a3d6c2021d)
+* [GraphQL - Type System - TutorialsPoint](https://www.tutorialspoint.com/graphql/graphql_type_system.htm)
+* [🎮 Prisma GraphQL IDE for better development workflows](https://github.com/prisma-labs/graphql-playground)
+* [Introducing GraphQL Playground | Prisma](https://www.prisma.io/blog/introducing-graphql-playground-f1e0a018f05d)
 
 ## [License](LICENSE)
 
