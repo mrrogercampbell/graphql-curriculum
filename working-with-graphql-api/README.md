@@ -2,8 +2,6 @@
 
 # What is GraphQL?
 
- Use this section to answer the question: "Why am I learning this?".
-
 GraphQL is a new API standard that was developed and open-sourced by Facebook with the intent to be a more efficient, powerful and flexible alternative to REST.
 
 Some consider GraphQL a database technology but this is incorrect, it is a **query language** for APIs.
@@ -23,40 +21,34 @@ By the end of this, developers should be able to:
 * Explain the difference between:
   * REST & GraphQL
   * GraphQL and GraphiQL
-* Be able to read and write GraphQL queries
+* Know how to utilize GraphQL Playground and GraphiQL
+* Be able to read and write GraphQL basic and nested queries
 
 ## Preparation
 
-1. Fork and clone this repository.
-   [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. Fork and clone this repository. [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
 1. Create a new branch, `training`, for your work.
 1. Checkout to the `training` branch.
 1. Install dependencies with `npm install`.
 
-Better preparation instructions may be found as
-[snippets](https://github.com/ga-wdi-boston/instructors/tree/master/snippets).
+Better preparation instructions may be found as [snippets](https://github.com/ga-wdi-boston/instructors/tree/master/snippets).
 
-It's a good idea to have students do these steps while you're writing objectives
-on the whiteboard.
+It's a good idea to have students do these steps while you're writing objectives on the whiteboard.
 
 ## REST vs GraphQL
-Rest and Whereas REST is the go to design pattern for most legacy backend applications, GraphQL is very quickly becoming the new norm. Each design pattern has it benefits and limitations.
+REST is the go to design pattern for most legacy backend applications, GraphQL is very quickly becoming the new norm. Each design pattern has it benefits and limitations.
 
-Give a brief overview of the differences between REST and GraphQL.
-
-This section will be a high level overview.
 
 ### REST APIs
 `REST` is an `API design architecture` for web services. RESTful web services are used to retrieve and manipulate data that is stored within a web service via HTTP methods, such as GET. POST,  PUT, and DELETE. The core principle of REST is that everything is a resource which is identifiable by a URL.
 
-### Benefits of a REST APIs
+**Benefits of a REST APIs**
 * Scalability
   * It  allows Engineers to modularize the client and server separately so that they are able to scale each indefinitely.
 * Flexibility
   * Engineers are able to design and develop REST APIs to receive different variations of request based off of user requirements and return data accordingly.
 
-### Limitations of a REST APIs
-
+**Limitations of a REST APIs**
 * Over-fetching
   * When the client downloads more data then is needed for the application.
 * Under-fetching
@@ -65,7 +57,7 @@ This section will be a high level overview.
 ### GraphQL APIs
 The GraphQL API design architecture was created with a more flexible approach to requesting and responding with data. The main difference between GraphQL and REST is that GraphQL can get retrieve the data your application needs in a single request. GraphQL can do this because it regards all data in a web service as either types and fields, not endpoints. With this unique design pattern, you can access all your data from a single endpoint versus multiple.
 
-### Benefits of GraphQL APIs
+**Benefits of GraphQL APIs**
 * Self Generating Documentation
   * GraphQL has the ability to self document your API based on the code you write.
 * No Need For Overfetching
@@ -73,24 +65,176 @@ The GraphQL API design architecture was created with a more flexible approach to
 * Strong Type System
   * The API's capabilities are defined clearly so that the client knows exactly how to access data.
 
-### Limitations of a GraphQL APIs
+**Limitations of a GraphQL APIs**
 * Single Endpoint
   * Where this is one of the greatest benefits, it can also cause a lot of issues when dealing with HTTP specification for caching.
 * Bloated Pattern For Small Applications
   * If you need a straight forward API for simple CRUD, than REST is probably your best approach due to the fact GraphQL can be a bit of heavy lifting for initial setup.
 
-#### Interacting with a GraphQL API via GraphiQL - We Do
-Will have students either
-1. Clone down a GraphQL API repo and interact with it.
-2. Provide a link to a GraphQL API documentation and have students interact with it that way.
+#### Interacting with a GraphQL API via GraphQL Playground - We Do
+As mentioned before, GraphQL has the ability to `self generate documentation` based off the code you write. A question you might ask is how and where are you able to view said documentation? The answer is `GraphQL Playground`.
 
-Would love feedback on what you suggest or if this section even makes sense to have.
+`GraphQL Playground` is a GraphQL `Integrated Development Environment (IDE)`. It is built on top of another `GraphQL IDE`called `GraphiGL`.
 
-This section will also explain to student what GraphiQL is and how it functions
+For now we will focus on utilizing `GraphQL Playground`, let navigate to the [Countries GraphQL API](https://countries.trevorblades.com/) and take a look at `GraphQL Playground` in action.
+
+
 
 #### GraphQL Queries
-This sections will explain GraphQL queries.
-This will be accomplished by demoing how to write queries, I plan to utilize whichever method is decided on above to accomplish this task; ie show students how to write queries with either a free public GraphQL API or one we have them clone down.
+
+There are three operations that can be performed in a GraphQL API:
+1. Query
+    * Used to `fetch` data
+2. Mutation
+   * Lets `change` data
+3. Subscription
+   * Allows you to `watch` data for changes
+
+For now we will just focus on how to work with a `query`.
+
+Queries allow the client to fetch exactly what data it would like to receive from the server.
+
+Before we interact with a GraphQL server we must define what operations we want to perform.
+
+```graphql
+query{
+
+}
+```
+The syntax above is the basic building blocks to requesting data from a GraphQL server. As it stand right now we are not requesting any data. All we are doing is defining the operation that perform, which is a `query`.
+
+In order to request information within our `query` we must specify what data `type` and  `field(s)` we want to receive data for.
+
+In the `query` below we are:
+1. Accessing the `countries` data type which is an `object` type.
+2. Querying data for the `name` field.
+```graphql
+query{
+  countries{
+    name
+  }
+}
+```
+Try performing this query in the GraphQL Playground.
+<details>
+  <summary>What data does this return?</summary>
+<p>It returns all the countries that are stored inside of the database.</p>
+
+```graphql
+  {
+  "data": {
+    "countries": [
+      {
+        "name": "Andorra"
+      },
+      {
+        "name": "United Arab Emirates"
+      },
+      {
+        "name": "Afghanistan"
+      },
+      {
+        "name": "Antigua and Barbuda"
+      },
+      {
+        "name": "Anguilla"
+      },
+      {
+        "name": "Albania"
+      },
+      {
+        "name": "Armenia"
+      },
+      ...
+    ]
+  }
+```
+
+</details>
+
+
+Not enough data? No problem, all you have to do is update you query for any other fields that you would like data for. Let's say you want to request the `name`, `native`, and `emoji` for each country.
+```graphql
+query{
+  countries{
+    name
+    native
+    emoji
+  }
+}
+```
+As you can see GraphQL is super flexible in the way you can query data. If you want something just ask for if not leave it out.
+
+#### Nested Query
+You might be asking yourself why are the queries in the last section any different that sending a request to an REST API? Some of GraphQL's true power is utilizing `Nested Queries`.
+
+A `Nested Queries` is when you request two different data `Types` or `models` within one request.
+
+Lets say we want to see every `language` that is spoken in each `Country`.
+
+```graphQL
+query{
+  countries{
+    name
+    native
+    emoji
+    languages{
+      name
+    }
+  }
+}
+```
+
+Let's breakdown what we just did above.
+1. Initial we are querying the `countries` field which is linked to the `Country` type.
+2. We then state that we would like to receive data for the `Country` type fields `name`, `native`, `emoji`, and `languages`.
+3. `languages` is a field who's `type` is an `Object` just like `countries`.
+4. By placing the `languages` field inside our `countries` query we are able to nest a `object` type inside of another.
+
+
+<details>
+  <summary>Try this query in GraphQL Playground. What data does it return?</summary>
+<p>It returns all the countries and all the languages that are spoken in each country.</p>
+
+```graphql
+{
+    "data": {
+        "countries": [
+            {
+                "name": "Andorra",
+                "native": "Andorra",
+                "emoji": "🇦🇩",
+                "languages": [
+                    {
+                        "name": "Catalan"
+                    }
+                ]
+            },
+            {
+                "name": "United Arab Emirates",
+                "native": "دولة الإمارات العربية المتحدة",
+                "emoji": "🇦🇪",
+                "languages": [
+                    {
+                        "name": "Arabic"
+                    }
+                ]
+            },
+            ...
+        ]
+    }
+}
+```
+
+</details>
+
+#### You Do
+Perform a nested query with any other `Type`.
+
+
+
+
+
 
 ## Lab: Write a Lab
 Plan to use [Challenge Template](https://git.generalassemb.ly/wdi-dc-instructors/homework-template)
