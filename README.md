@@ -9,7 +9,7 @@ Well, you asked for it!
 
 ### Lessons:
 These lesson are currently taught in the follow sequence:
-1. [Working With Graphql API](./1-working-with-graphql-api/README.md)
+1. [Working With Graphql API](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/working-with-graphql-api)
    * [Instructor Prep](#)
         <details>
         <summary>Assignments:</summary>
@@ -23,7 +23,7 @@ These lesson are currently taught in the follow sequence:
           </ul>
         </details>
         <br/>
-1. [GraphQL and React](2-graphql-and-react/README.md)
+2. [GraphQL and React](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-and-react)
    * [Instructor Prep](#)
         <details>
         <summary>Assignments:</summary>
@@ -37,12 +37,12 @@ These lesson are currently taught in the follow sequence:
           </ul>
         </details>
         <br/>
-2. [Building a GraphQL API Pt. 1](3-building-a-graphql-api-pt-1/README.md)
+3. [Building a GraphQL API Pt. 1](3-building-a-graphql-api-pt-1/README.md)
    * [Lab 3](./assignments/lab-3)
    * Homework(s):
      * [Homework 5](./assignments/lab-4)
      * [Homework 6](./assignments/lab-5)
-3. [Building a GraphQL API Pt. 2](4-building-a-graphql-api-pt-2/README.md)
+4. [Building a GraphQL API Pt. 2](4-building-a-graphql-api-pt-2/README.md)
    * Lab:
      * [Lab 4](./assignments/lab-4)
    * Homework(s):
