@@ -78,6 +78,7 @@ As mentioned before, GraphQL has the ability to `self generate documentation` ba
 
 For now we will focus on utilizing `GraphQL Playground`, let navigate to the [Countries GraphQL API](https://countries.trevorblades.com/) and take a look at `GraphQL Playground` in action.
 
+[![Countries GraphQL API Playground Landing Page](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-landing.png?raw=true)](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-landing.png)
 
 
 #### GraphQL Queries
