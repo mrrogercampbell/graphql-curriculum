@@ -78,7 +78,59 @@ As mentioned before, GraphQL has the ability to `self generate documentation` ba
 
 For now we will focus on utilizing `GraphQL Playground`, let navigate to the [Countries GraphQL API](https://countries.trevorblades.com/) and take a look at `GraphQL Playground` in action.
 
-[![Countries GraphQL API Playground Landing Page](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-landing.png?raw=true)](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-landing.png)
+Here you will see the GraphQL Playground IDE interface. We will learn how to interact with this shortly.
+![Countries GraphQL API Playground Landing Page](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-landing.png?raw=true)]
+
+If you look to the right hand side of the site you will see two buttons `DOCS` and `SCHEMA`.
+
+
+##### GraphQL Playground DOCS
+Let's start by clicking the `DOCS` button.
+
+This here is part of GraphQL's `self generate documentation`. GraphQL Playground does add some extra feature to this. What we see below is documentation on all the queries that this GraphQL endpoint can handle.
+![Countries GraphQL API Playground Docs Image 1](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-docs-1.png?raw=true)
+
+This documentation is also interactive, meaning you are able to click on a query to see what `fields` you are able to pass in.
+
+Try clicking the `countries` query.
+![Countries GraphQL API Playground Docs Image 2](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-docs-2.png?raw=true)
+
+Now you are able to see all the fields that you are able to query and their corresponding types. We will review the GraphQL `Type System` in the next section of this lesson.
+
+##### GraphQL Playground Schema
+Next we will take a look at the Schema documentation that is generated within GraphQL Playground.
+
+Click on the `Schema` button, this tab describes all the functionality offered by this GraphQL endpoint.
+
+![Countries GraphQL API Playground Schema](https://git.generalassemb.ly/DC-WDI/GraphQL/blob/master/working-with-graphql-api/assets/graphql-playground-schema.png?raw=true)
+
+
+The topic of a Schema within the bounds of GraphQL could be broken into a completely separate lesson. For now all you need to know is that this tab will show you what:
+* Fields are within each data model of the backend
+* Type of queries can be performed on each model and how to perform them
+
+We will get a clear understanding of GraphQL Schemas once we start design and developing our own GraphQL APIs.
+
+
+#### GraphQL Type System
+
+Each `field` has a `type`. The `type` defines what kind of data will be returned for that field.
+
+GraphQL has a `Type System` which defines the various data types that can be used by a GraphQL application.
+
+There are 5 Types in GraphQL:
+1. Scalar
+   * These are primitive data types that can only store a single value
+     * Int, Flat, String, Boolean, ID
+2. Object
+   * Most common type and is used in a schema to represent a group of fields.
+3. Query
+   * Used to get data from the server. How you instantiate `READ` functionality on a GraphQL server.
+4. Mutations
+   * Denotes the requests that instantiate `Create`, `Update`, and `Delete` functionality on a GraphQL server.
+5. Enum
+   * Similar to a `scalar type`, this type is used when the value for a filed must be from a set list of options.
+
 
 
 #### GraphQL Queries
