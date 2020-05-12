@@ -3,7 +3,7 @@
 
 ### Lessons:
 These lesson are currently taught in the follow sequence:
-1. [Working With Graphql API](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/working-with-a-graphql-api)
+1. [Working With a Graphql API](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/working-with-a-graphql-api)
    * [Instructor Prep](#)
    * [Lab 1](./assignments/lab-1)
    * Homework(s):
