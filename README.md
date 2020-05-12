@@ -9,7 +9,7 @@ These lesson are currently taught in the follow sequence:
    * Homework(s):
      * [Homework 1](./assignments/lab-1)
      * [Homework 2](./assignments/lab-2)
-2. [GraphQL and React](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-react-and-apollo)
+2. [GraphQL, React, and Apollo](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-react-and-apollo)
    * [Instructor Prep](#)
    * [Lab 2](./assignments/lab-3)
    * Homework(s):
