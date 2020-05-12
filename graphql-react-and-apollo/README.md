@@ -23,8 +23,8 @@ This section will be a high level overview.
 
 
 #### Installing Apollo Client
-1. Clone down this React [starter app](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-react-and-apollo/my-first-apollo-react-app)
-2. cd into the project and run `npm i`
+1. Cd into the [my-first-apollo-react-app](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-react-and-apollo/my-first-apollo-react-app) located within the lesson repo
+2. Run `npm i`
 3. Run `npm install apollo-boost @apollo/react-hooks graphql`
    * `apollo-boost`: Package containing everything you need to set up Apollo Client
    * `@apollo/react-hooks`: React hooks based view layer integration
