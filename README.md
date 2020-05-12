@@ -3,13 +3,13 @@
 
 ### Lessons:
 These lesson are currently taught in the follow sequence:
-1. [Working With Graphql API](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/working-with-graphql-api)
+1. [Working With Graphql API](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/working-with-a-graphql-api)
    * [Instructor Prep](#)
    * [Lab 1](./assignments/lab-1)
    * Homework(s):
      * [Homework 1](./assignments/lab-1)
      * [Homework 2](./assignments/lab-2)
-2. [GraphQL and React](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-and-react)
+2. [GraphQL and React](https://git.generalassemb.ly/DC-WDI/GraphQL/tree/master/graphql-react-and-apollo)
    * [Instructor Prep](#)
    * [Lab 2](./assignments/lab-3)
    * Homework(s):
