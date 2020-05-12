@@ -16,23 +16,121 @@ By the end of this, developers should be able to:
 * Render Fetched Data from a GraphQL API via React Components
 
 ## Installing Apollo Client
+1. Clone down this React [starter app](#)
+2. cd into the project and run `npm i`
+3. Run `npm install apollo-boost @apollo/react-hooks graphql`
+   * `apollo-boost`: Package containing everything you need to set up Apollo Client
+   * `@apollo/react-hooks`: React hooks based view layer integration
+   * `graphql`: Also parses your GraphQL queries
+4. Open the app in VS Code
 
-Will give a set by step walk through of install Apollo client and all sub-dependencies.
-
-For now I think we will use:
-1. Apollo Client
-2. Parcel
 
 Better preparation instructions may be found as
 [snippets](https://github.com/ga-wdi-boston/instructors/tree/master/snippets).
-
-### What is Parcel (and or any other sub-dependencies)
-This will be a quick and high level section explain what the intended purposes of the sub-dependencies are.
 
 ### What is Apollo
 Give a brief overview of Apollo and how it allows you to handle fetching and rendering GraphQL within a React application.
 
 This section will be a high level overview.
+
+
+
+### Performing API Calls With Apollo Client
+* `I Do`, `We Do` section where we walk students through performing API calls to GraphQL endpoint.
+* Plan to use a free public GraphQL API.
+
+We will continue to use the [Countries GraphQL API](https://countries.trevorblades.com/) in this lesson.
+
+Open the `App.js` file and clear out the starter code with the following:
+```jsx
+import React from 'react';
+import ApolloClient, { gql } from "apollo-boost";
+import { ApolloProvider } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
+
+const client = new ApolloClient({
+  uri: `https://countries.trevorblades.com/`
+})
+
+const App = () => (
+  <ApolloProvider client={client}>
+    <div>
+      <h2>My first Apollo app 🚀</h2>
+    </div>
+  </ApolloProvider>
+);
+
+```
+
+**Talk through what this code snippet does.**
+
+Next we will add the query to our code. After the `client` variable and before the `App` component add the `query` variable:
+```jsx
+const getUsers = gql`
+    query {
+        countries {
+            name
+            emoji
+        }
+    }
+`
+```
+
+**Talk through what this code snippet does.**
+
+
+Now we will create a function that handles our API call to the GraphQL, we will start by just `console logging` the data that is returned from our query:
+
+```jsx
+function Countries() {
+  const { loading, err, data } = useQuery(getUsers)
+
+  if (loading) return <p>Loading....</p>
+  if (err) return <p>Error....</p>
+
+  console.log(data)
+  return <p>I worked</p>
+}
+
+const App = () => (
+  <ApolloProvider client={client}>
+    <div>
+      <h2>My first Apollo app 🚀</h2>
+      <Countries />
+    </div>
+  </ApolloProvider>
+);
+
+export default App;
+
+```
+
+Explain that we now have to render the `Countries` component in order to see the returned data in the console.
+
+**Talk through what this code snippet does.**
+
+```jsx
+function Countries() {
+  const { loading, err, data } = useQuery(getUsers)
+
+  if (loading) return <p>Loading....</p>
+  if (err) return <p>Error....</p>
+
+  return data.countries.map((country, i) => (
+    <div key={i}>
+      <p>{country.name}: {country.emoji}</p>
+    </div>
+  ))
+}
+```
+Finally we will are able to render our returned data in the `App` Component:
+
+**Talk through what this code snippet does.**
+
+
+
+### Rendering Fetched GraphQL Data in React
+* `I Do`, `We Do` section where show students how to render fetched GraphQL data via React Components.
 
 
 ## Interacting with GraphQL Data in React
@@ -41,12 +139,6 @@ This section of the lesson will introduce students to:
 2. Rendering Fetched GraphQL Data in React
 3. GraphQL Variables
 
-### Performing API Calls With Apollo Client
-* `I Do`, `We Do` section where we walk students through performing API calls to GraphQL endpoint.
-* Plan to use a free public GraphQL API.
-
-### Rendering Fetched GraphQL Data in React
-* `I Do`, `We Do` section where show students how to render fetched GraphQL data via React Components.
 
 ## GraphQL Variables
 Will explain GraphQL variables and how they provide a better way to set up dynamic values in operations
