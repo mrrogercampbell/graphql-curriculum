@@ -253,9 +253,3 @@ Ideas for first Homework:
 - Any useful links should be included in the talk material where the link is first referenced.
 - Additional links for further study or exploration are appropriate in this section.
 - Links to important parts of documentation not covered during the talk, or tools tangentially used but not part of the focus of the talk, are also appropriate.
-
-#### [License](LICENSE)
-
-**?Is this the correct information for this section?**
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
